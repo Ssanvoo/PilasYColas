@@ -18,6 +18,7 @@ public class pruebaLista {
         
         l.eliminarElemento(3);
         l.mostrarLista();
-        
+        l.obtenerElemento(10);
+        l.buscarNum(234);
     }
 }
