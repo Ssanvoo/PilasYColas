@@ -1,7 +1,7 @@
 
 import java.util.Arrays;
 
-public class Lista {
+public class Lista implements Cola, Pila {
 
     Integer lista[];
 
@@ -9,6 +9,9 @@ public class Lista {
         lista = new Integer[0];
     }
 
+    public int getNumElementos(int pos){
+        return lista[pos];
+    }
     public int getNumElementos() {
         return lista.length;
     }
@@ -73,6 +76,24 @@ public class Lista {
         }
         System.out.println(pos);
     }
+
+    @Override
+    public void encolar(Integer n) {
+        insertarFinal(n);
+    }
+
+    @Override
+    public void desencolar() {
+        eliminarElemento(0);
+    }
     
+    public void apilar(Integer n) {
+        insertarPrincipio(n);
+    }
+    
+    @Override
+    public void desapilar(){
+        eliminarElemento(lista.length - 1 );
+    }
     
 }
